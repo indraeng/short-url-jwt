@@ -13,7 +13,7 @@ const PORT = 8000;
 
 
 //mongodb connection
-connectToMongodb('mongodb://127.0.0.1:27017/short-url-practice')
+connectToMongodb('mongodb://127.0.0.1:27017/short-url-practice-jwt')
     .then(() => console.log('Mongodb connected!'))
     .catch((err) => console.log('Mongodb error', err))
 

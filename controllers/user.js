@@ -19,9 +19,11 @@ const handleLogin = async (req, resp) => {
     if (!user) return resp.render('Login', {
         error: 'Invalid username and password'
     })
-    const sessionId = uuidv4();
-    setUser(sessionId, user)
-    resp.cookie('sessionid', sessionId)
+    // const sessionId = uuidv4();
+    // setUser(sessionId, user)
+    // resp.cookie('sessionid', sessionId)
+    const token = setUser(user)
+    resp.cookie('token',token)
     return resp.redirect('/Home')
 }
 
